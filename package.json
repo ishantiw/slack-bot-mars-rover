@@ -1,0 +1,25 @@
+{
+  "name": "slack-bot-app",
+  "version": "1.0.0",
+  "description": "Slack bot",
+  "main": "server/service.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "slack",
+    "bot",
+    "slack",
+    "bot",
+    "nodejs",
+    "expressjs",
+    "nlp"
+  ],
+  "author": "Ishan Tiwari <ishan210788@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/client": "^3.8.1",
+    "express": "^4.14.1",
+    "superagent": "^3.4.1"
+  }
+}
