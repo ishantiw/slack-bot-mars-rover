@@ -4,20 +4,22 @@ const service = require('../server/service');
 const http = require('http');
 const slackClient = require('../server/slackClient');
 
-const slackToken = 'xoxb-134182292336-Sq2Eg9Vv2JHqAgEwflKh80Jh';
-const slackLogLevel = 'verbose';
-const server  = http.createServer(service);
+/* get the keys from the property files */
+const parser = require('properties-parser');
+const slackAPIToken = parser.read('./apiKeys.properties')['slackKey'];
+const witToken = parser.read('./apiKeys.properties')['witKey'];
 
-const witToken = 'CDSHDZYHJ3OCM22CMHH2CJZXE42XZHNF';
+const slackLogLevel = 'verbose';
+const server = http.createServer(service);
 const witClient = require('../server/witClient')(witToken);
 
-const rtm = slackClient.init(slackToken, slackLogLevel, witClient);
+const serviceRegistry = service.get('serviceRegistry');
+const rtm = slackClient.init(slackAPIToken, slackLogLevel, witClient, serviceRegistry);
 rtm.start();
 
 slackClient.addAuthenticatedHandler(rtm, () => server.listen(3000));
-server.listen(3000);
-//xoxb-134182292336-Sq2Eg9Vv2JHqAgEwflKh80Jh
-//node_env is used to set the development or production mode, by default its development mode
-server.on('listening', function() {
+
+/* node_env is used to set the development or production mode, by default its development mode */
+server.on('listening', function () {
     console.log(`Slack Bot App is listening on ${server.address().port} in ${service.get('env')} mode.`);
 });
