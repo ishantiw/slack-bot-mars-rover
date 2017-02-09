@@ -12,7 +12,7 @@ function handleOnAuthenticated(rtmStartData) {
 }
 
 function handleOnMessage(message) {
-    if (message.text.toLowerCase().includes('rover')) {
+    if (message.text.toLowerCase().includes('alien')) {
         nlp.ask(message.text, (err, res) => {
             if (err) {
                 console.log(err);
