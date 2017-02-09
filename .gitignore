@@ -2,4 +2,4 @@
 node_modules
 
 # KeyFiles
-*.properties
+apiKeys.properties
