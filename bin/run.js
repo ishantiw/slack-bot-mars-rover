@@ -6,8 +6,8 @@ const slackClient = require('../server/slackClient');
 
 /* get the keys from the property files */
 const parser = require('properties-parser');
-const slackAPIToken = parser.read('./apiKeys.properties')['slackKey'];
-const witToken = parser.read('./apiKeys.properties')['witKey'];
+const slackAPIToken = parser.read('./apiKeysLocal.properties')['slackKey'];
+const witToken = parser.read('./apiKeysLocal.properties')['witKey'];
 
 const slackLogLevel = 'verbose';
 const server = http.createServer(service);
