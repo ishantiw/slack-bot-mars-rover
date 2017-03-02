@@ -1,4 +1,9 @@
 # slack-bot-mars-rover: Node.js: Building a Slack Bot with Nodejs Microservices
+Talk to Mars rover using NASA's api with appropriate camera code which will send you back the photo clicked by that camera with its full name and the name of the rover and the total number of pictures it has taken so far :thumbsup:. Also ask weather and time details of your city on earth from the rover. :alien:
+
+![mars rover bot](https://cloud.githubusercontent.com/assets/9600691/23516729/61b3caa6-ff6e-11e6-9bf4-0243ad796822.png)
+
+
 
 ## Pre-requisites
 
@@ -56,3 +61,21 @@ https://github.com/ishantiw/location-time-intent
 
 ### To get the weather for a city using open weather api, 
 https://github.com/ishantiw/location-weather-intent
+
+### To get the details of various cameras on mars rover using NASA's api,
+https://github.com/ishantiw/mars_camera_intent
+
+
+Abbreviation |	Camera |	Curiousity |	Opportunity |	Spirit
+- FHAZ |	Front Hazard Avoidance Camera |	✔ |	✔ |	✔
+- RHAZ |	Rear Hazard Avoidance Camera |	✔ |	✔ |	✔
+- MAST |	Mast Camera |	✔ |		 |    |
+- CHEMCAM |	Chemistry and Camera Complex |	✔ |		
+- MAHLI |	Mars Hand Lens Imager |	✔ |		
+- MARDI |	Mars Descent Imager |	✔ |		
+- NAVCAM |	Navigation Camera |	✔ |	✔ |	✔ |
+- PANCAM |	Panoramic Camera |	 |	✔ |	✔ |
+- MINITES |	Miniature Thermal Emission Spectrometer (Mini-TES) |   |		✔ |	✔
+
+
+For more information on Mars rover visit NASA's website https://api.nasa.gov/api.html#MarsPhotos
